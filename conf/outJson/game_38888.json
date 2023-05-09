@@ -1,0 +1,53 @@
+{
+  "tenant_id": 11,
+  "area_id": 5178,
+  "game_id": 38888,
+  "name": "二人斗地主",
+  "sessions": [
+    {
+      "session_id": 1,
+      "session_level": 1,
+      "session_name": "初级场",
+      "session_sort": 0,
+      "session_flag": 1,
+      "min_score": 1500,
+      "max_score": 0,
+      "cost": 1000,
+      "cost_mode": 0,
+      "base_score": 30,
+      "base_online": 0,
+      "chair_cnt": 2,
+      "game_rule": "ServicePay='1000';DayWinLostRoof='60000000';GoldSealRoof='10000000';GameType=\"1\";GameMode=\"2\";SepCards=\"5\";DefendCfg=\"1:1:180:300:60:30:15\";"
+    },
+    {
+      "session_id": 2,
+      "session_level": 2,
+      "session_name": "中级场",
+      "session_sort": 1,
+      "session_flag": 1,
+      "min_score": 5000,
+      "max_score": 0,
+      "cost": 2000,
+      "cost_mode": 0,
+      "base_score": 1500,
+      "base_online": 0,
+      "chair_cnt": 2,
+      "game_rule": "ServicePay='2000';DayWinLostRoof='60000000';GoldSealRoof='10000000';GameType=\"1\";GameMode=\"2\";SepCards=\"5\";DefendCfg=\"1:1:180:300:60:30:15\";"
+    },
+    {
+      "session_id": 3,
+      "session_level": 3,
+      "session_name": "高级场",
+      "session_sort": 2,
+      "session_flag": 1,
+      "min_score": 10000,
+      "max_score": 0,
+      "cost": 6000,
+      "cost_mode": 0,
+      "base_score": 3000,
+      "base_online": 0,
+      "chair_cnt": 2,
+      "game_rule": "ServicePay='6000';DayWinLostRoof='60000000';GoldSealRoof='10000000';GameType=\"1\";GameMode=\"2\";SepCards=\"5\";DefendCfg=\"1:1:180:300:60:30:15\";"
+    }
+  ]
+}
