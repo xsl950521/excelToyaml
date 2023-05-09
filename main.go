@@ -116,6 +116,8 @@ func Transfer(sheetName string) {
 }
 
 func main() {
+	import_data.Init()
+
 	f, err := excelize.OpenFile(templatePath)
 	if err != nil {
 		fmt.Println(err)

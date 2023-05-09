@@ -31,14 +31,28 @@ type Session struct {
 }
 
 var (
-	sourcePath string = "./conf/game_config_out/source.json"
-	outPath    string = "./conf/game_config_out"
-	// sourceData []byte
+	sourcePath    string = "./conf/source/source.json"
+	outPath       string = "./conf/game_config_out"
+	tmpSourcePath string = "./conf/game_config_out/tmpSource.json"
 )
+
+func Init() {
+	// 读取原有的 JSON 数据
+	jsonData, err := ioutil.ReadFile(sourcePath)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	err = ioutil.WriteFile(tmpSourcePath, jsonData, 0644)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+}
 
 func ImportData(filename string) {
 	// 读取原有的 JSON 数据
-	jsonData, err := ioutil.ReadFile(sourcePath)
+	jsonData, err := ioutil.ReadFile(tmpSourcePath)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -74,7 +88,7 @@ func ImportData(filename string) {
 		fmt.Println(err)
 		return
 	}
-	err = ioutil.WriteFile(sourcePath, jsonData, 0644)
+	err = ioutil.WriteFile(tmpSourcePath, jsonData, 0644)
 	if err != nil {
 		fmt.Println(err)
 		return
