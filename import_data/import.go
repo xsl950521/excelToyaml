@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
 )
 
 type Game struct {
@@ -42,6 +43,17 @@ func Init() {
 	if err != nil {
 		fmt.Println(err)
 		return
+	}
+	if _, err := os.Stat(tmpSourcePath); os.IsNotExist(err) {
+		// 文件不存在
+	} else {
+		// 文件存在
+		err := os.Remove(tmpSourcePath)
+		if err != nil {
+			// 删除失败
+		} else {
+			// 删除成功
+		}
 	}
 	err = ioutil.WriteFile(tmpSourcePath, jsonData, 0644)
 	if err != nil {
